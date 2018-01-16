@@ -5,10 +5,10 @@ from bs4 import BeautifulSoup
 
 def get_the_image(img_url):
     src_code = requests.get(img_url).text
-    soop = BeautifulSoup(src_code)
+    soop = BeautifulSoup(src_code , "html.parser")
 
     for pic in soop.findAll('img', {'id': 'wallpaper'}):
-        urllib.request.urlretrieve(pic.get('src'), "grub.jpg")
+        urllib.request.urlretrieve('https:' + pic.get('src'), "grub.jpg")
 
 
 
@@ -16,7 +16,7 @@ def get_the_image(img_url):
 def anime_wallpaper(url):
     source_code = requests.get(url).text
 
-    soup = BeautifulSoup(source_code)
+    soup = BeautifulSoup(source_code, "html.parser")
 
     for imag in soup.findAll( 'a' , { 'class' : 'preview'}):
         img = imag.get('href')
