@@ -4,6 +4,12 @@ import random
 from bs4 import BeautifulSoup
 
 
+print("\n\n This is the Web Scraper for the website https://alpha.wallhaven.cc and the downloaded image will be used as bootloader wallpaper")
+username   = input("\n\n Enter the USERNAME ")
+search_tag = input("\n\n Enter the Tag realted to the wallpaper you wish to download")
+
+
+
 def get_the_image(img_url, USERNAME):
     src_code = requests.get(img_url).text
     soop = BeautifulSoup(src_code , "html.parser")
@@ -15,9 +21,9 @@ def get_the_image(img_url, USERNAME):
             photu.write(r.content)
 
 
-
-
-def anime_wallpaper(url , user):
+def anime_wallpaper(tag , user):
+    
+    url = "https://alpha.wallhaven.cc/search?q=" + tag + "&search_image="
     source_code = requests.get(url).text
 
     soup = BeautifulSoup(source_code, "html.parser")
@@ -31,4 +37,5 @@ def anime_wallpaper(url , user):
             continue
 
 
-anime_wallpaper("https://alpha.wallhaven.cc/search?q=anime&search_image=&page=2" , "Zanark")
+anime_wallpaper(search_tag, username)
+                
