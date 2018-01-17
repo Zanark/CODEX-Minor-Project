@@ -1,6 +1,6 @@
+import wget
 import requests
 import random
-import urllib.request
 from bs4 import BeautifulSoup
 
 def get_the_image(img_url):
@@ -8,7 +8,7 @@ def get_the_image(img_url):
     soop = BeautifulSoup(src_code , "html.parser")
 
     for pic in soop.findAll('img', {'id': 'wallpaper'}):
-        urllib.request.urlretrieve('https:' + pic.get('src'), "grub.jpg")
+        wget.download('https:' + pic.get('src'), "grub.jpg")
 
 
 
