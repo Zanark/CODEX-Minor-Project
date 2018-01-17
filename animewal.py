@@ -21,7 +21,7 @@ def get_the_image(img_url, USERNAME):
             photu.write(r.content)
 
 
-def anime_wallpaper(tag , user):
+def wallpapa(tag , user):
     
     url = "https://alpha.wallhaven.cc/search?q=" + tag + "&search_image="
     source_code = requests.get(url).text
@@ -37,5 +37,5 @@ def anime_wallpaper(tag , user):
             continue
 
 
-anime_wallpaper(search_tag, username)
+wallpapa(search_tag, username)
                 
