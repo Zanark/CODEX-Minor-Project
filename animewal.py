@@ -3,7 +3,7 @@ import requests
 import random
 from bs4 import BeautifulSoup
 
-def cli:
+def cli():
     print("\n\n This is the Web Scraper for the website https://alpha.wallhaven.cc and the downloaded image will be used as bootloader wallpaper")
     username   = input("\n\n Enter the USERNAME ")
     search_tag = input("\n\n Enter the Tag realted to the wallpaper you wish to download")

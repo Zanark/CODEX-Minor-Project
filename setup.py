@@ -7,6 +7,8 @@ setup(
 	py_modules = ['animewal'],
 	install_requires = [
 		'click',
+		'requests',
+		'bs4',
 
 	],
 	entry_points = '''
