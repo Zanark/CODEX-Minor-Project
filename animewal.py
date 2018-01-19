@@ -3,9 +3,13 @@ import requests
 import random
 from bs4 import BeautifulSoup
 
-def cli():
-    print("\n\n This is the Web Scraper for the website https://alpha.wallhaven.cc and the downloaded image will be used as bootloader wallpaper")
-    username   = input("\n\n Enter the USERNAME ")
+@click.command()
+@click.option('--unix_username' , default = 'ubuntu' , help = 'To input the $USERNAME     Default_Username = \'ubuntu\'')
+def cli(unix_username):
+    
+    """This is the Web Scraper for the website https://alpha.wallhaven.cc and the downloaded image will be used as bootloader wallpaper"""
+
+   #username   = input("\n\n Enter the USERNAME ")
     search_tag = input("\n\n Enter the Tag realted to the wallpaper you wish to download")
 
 
@@ -37,5 +41,5 @@ def cli():
                 continue
 
 
-    wallpapa(search_tag, username)
+    wallpapa(search_tag, unix_username)
                 
