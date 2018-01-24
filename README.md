@@ -17,7 +17,7 @@ The user needs to edit the grub file to make this program fully functional.
 
 1. Edit the file `/etc/default/grub` and add the following line to it, replacing $USERNAME with your username.
 
-         `export GRUB_MENU_PICTURE = "/home/$USERNAME/images/grub.jpg"`
+         export GRUB_MENU_PICTURE = "/home/$USERNAME/images/grub.jpg"
 
 2. On execution, the program will then copy the downloaded image into the folder in `/home/$USERNAME/images` and rename it to `grub.jpg` , so that it will be shown as the grub menu background.
 
