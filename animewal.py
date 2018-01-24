@@ -17,7 +17,7 @@ def cli():
         for pic in soop.findAll('img', {'id': 'wallpaper'}):
             url = 'https:' + pic.get('src')
             r = requests.get(url)
-            with open("/home/$" + USERNAME + "/images/grub.jpg", "wb") as photu:
+            with open("/home/" + USERNAME + "/images/grub.jpg", "wb") as photu:
                 photu.write(r.content)
 
 
