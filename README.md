@@ -36,11 +36,3 @@ Other than Python3.x, you'll require the following libraries:<br>
 3. Enter the command `$ pip3 install --editable . ` to install all dependcies.
 
 4. Now run the program using `$ grubwallpaper`
-
-```
-  --unix_username   To input the USERNAME of the user.
-                    Default username : 'ubuntu'
-
-  --help            Show this message and exit.
-
-```
